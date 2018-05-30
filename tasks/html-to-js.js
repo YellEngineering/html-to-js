@@ -39,6 +39,9 @@ module.exports = function(grunt) {
           data: { html: contents } 
         })
 
+        // replace multiple spaces with single space
+        output = output.replace(/  +/g, ' ');
+
         // gets extension from string with '.' at the start 
         let fullExtension = '.' + filepath.split(".").splice(1).join('.');
 
